@@ -1,0 +1,50 @@
+// Consultation.scss
+
+.consultation {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .specialites-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; // espace entre les cartes
+  }
+  
+  .specialite-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px; // largeur fixe pour les cartes
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .specialite-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .specialite-card h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+  }
+  
+  .specialite-card p {
+    font-size: 1em;
+    color: #333;
+  }
+
+  img.logoDoctolib {
+    position: fixed;         /* Fixe le logo à un endroit spécifique de l'écran */
+    width: 200px;             /* Ajustez la largeur selon vos besoins */
+    height: auto;            /* Maintient les proportions de l'image */
+    top: 80px;               /* Distance du haut de l'écran */
+    left: 30px;              /* Distance du bord gauche de l'écran */
+    z-index: 1000;           /* Assure que le logo reste au-dessus des autres éléments */
+} 
+  

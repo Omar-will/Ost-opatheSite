@@ -4,6 +4,7 @@ import Header from './Sections/Header';
 import Footer from './Sections/Footer';
 import Home from './Pages/Home.jsx';
 import Consultation from './Pages/Consultation';
+import FAQ from './Pages/FAQ';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/consultation" element={<Consultation />} />
+          <Route path="/FAQ" element={<FAQ />} />
           {/* Ajoutez d'autres routes ici si nécessaire */}
         </Routes>
       </main>

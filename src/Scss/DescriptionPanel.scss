@@ -1,0 +1,80 @@
+
+
+.description__panel {
+    margin-top: 3rem;
+    margin-bottom: -1rem;
+    flex-basis: 100%;
+    overflow: hidden;
+    @media screen and (width <= 480px){
+    margin-bottom: -1rem;
+    }
+    p {
+        margin-block: 0;
+    }
+    .description__header{
+    background-color: rgb(174, 174, 174);
+    color: white;
+    padding: 0.2em 1em;
+    border-radius: 0.7rem;
+    height: 52px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (width <= 768px){
+      margin-left: 0;
+      margin-right: 0;
+      }
+      &:hover {
+        color: black; 
+        cursor: pointer; 
+      }
+    i {
+        font-size: 1.7rem;
+        cursor: pointer;
+    }
+    }
+    .description__content {
+        background-color: rgb(232, 229, 229);
+        color: black;
+        padding: 2rem;
+        border-radius: 0.7rem;
+        position: relative;
+        top: -0.5rem;
+        z-index: -1;
+        transition: transform 0.3s ease-in-out;
+
+    &.hidden {
+      transform: translateY(-100%);
+      margin-top: -100px;
+      margin-left: 4rem;
+      margin-right: 4rem;
+      @media screen and (width <= 300px){
+      margin-bottom: -5rem;
+      }
+      @media screen and (width <= 768px){
+      margin-top: -100px;
+      margin-left: 0rem;
+      margin-right: 0rem;
+      }
+    }
+    &.visible {
+      transform: translateY(0);
+      min-height: 172px;
+      height: auto;
+      margin-left: 4rem;
+      margin-right: 4rem;
+      @media screen and (width <= 768px){
+        margin-left: 0rem;
+      margin-right: 0rem;
+        
+        }
+    }
+    }
+  }
+
+  // *{
+  //   box-shadow: 0 0 0 3px red 
+  //   inset;
+  // }  

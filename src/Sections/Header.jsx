@@ -20,6 +20,7 @@ function Header() {
           <li><Link to="/consultation"><h1>Consultation</h1></Link></li>
           <li><h1>Accès</h1></li>
           <li><h1>Contact</h1></li>
+          <li><Link to="/FAQ"><h1>FAQ</h1></Link></li>
         </ul>
       </nav>
     </header>
