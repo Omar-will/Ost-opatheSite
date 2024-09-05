@@ -10,7 +10,7 @@
 //   };
 
 //   return (
-//     <LoadScript googleMapsApiKey="AIzaSyDeeHvGjzrehbX9wINpZ-X4Dom3sa-lblU"> {/* Remplace YOUR_API_KEY par ta clé API */}
+//     <LoadScript googleMapsApiKey=""> {/* Remplace YOUR_API_KEY par ta clé API */}
 //       <GoogleMap
 //         mapContainerStyle={{ width: '100%', height: '500px' }} // Définir la taille de la carte
 //         options={mapOptions}
