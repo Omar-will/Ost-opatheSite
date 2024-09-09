@@ -4,6 +4,8 @@ import Header from './Sections/Header';
 import Footer from './Sections/Footer';
 import Home from './Pages/Home.jsx';
 import Consultation from './Pages/Consultation';
+import NotrePersonnel from './Pages/NotrePersonnel';
+import Blog from './Pages/Blog';
 import FAQ from './Pages/FAQ';
 
 function App() {
@@ -14,8 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/consultation" element={<Consultation />} />
+          <Route path="/notre-personnel-medical" element={<NotrePersonnel />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/FAQ" element={<FAQ />} />
-          {/* Ajoutez d'autres routes ici si nécessaire */}
         </Routes>
       </main>
       <Footer />

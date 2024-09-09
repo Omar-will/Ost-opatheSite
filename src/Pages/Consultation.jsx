@@ -1,58 +1,143 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Scss/Consultation.scss';
+import Modal from 'react-modal';
+import specialitesData from '../data/consultationContent.json'; 
 
-// Composant pour afficher une spécialité
-const SpecialiteCard = ({ title, definition, imageSrc }) => (
-  <div className="specialite-card">
+Modal.setAppElement('#root');
+
+const SpecialiteCard = ({ title, imageSrc, onClick }) => (
+  <div className="specialite-card" onClick={onClick}>
     <img src={imageSrc} alt={title} className="specialite-image" />
     <h3>{title}</h3>
-    <p>{definition}</p>
   </div>
 );
 
-const LazyImage = ({ src, alt, className }) => (
-  <img src={src} alt={alt} className={className} loading="lazy" />
-);
-
 function Consultation() {
+  const [showShapes, setShowShapes] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({});
+  const [showCaduceus, setShowCaduceus] = useState(false);
+  const [imagesLoaded, setImagesLoaded] = useState(false);  // Ajout pour vérifier si les images sont chargées
+
+  // Précharger toutes les images avant le rendu
+  useEffect(() => {
+    const imagesToPreload = [
+      '/assets/images/osteopathe-crane.webp',
+      '/assets/images/ostéopathie-myofasciale.webp',
+      '/assets/images/ostéopathie-pédiatrique.webp',
+      '/assets/images/ostéopathie-structurelle.webp',
+    ];
+
+    let loadedImagesCount = 0;
+    imagesToPreload.forEach(src => {
+      const img = new Image();
+      img.src = src;
+      img.onload = () => {
+        loadedImagesCount++;
+        if (loadedImagesCount === imagesToPreload.length) {
+          setImagesLoaded(true);  // Toutes les images sont chargées
+        }
+      };
+    });
+  }, []);
+
+  const openModal = (title, definition, imageSrc) => {
+    setModalContent({ title, definition, imageSrc });
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  // Afficher les formes géométriques après 1 seconde
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowShapes(true);
+      setShowCaduceus(true); 
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Tant que les images ne sont pas chargées, on affiche un loader ou rien
+  if (!imagesLoaded) {
+    return (
+      <div>
+        <img
+          src="/assets/images/caduceus.webp"
+          alt="Caduceus"
+          style={{
+            width: '180px',
+            height: '180px',
+            animation: 'rotate 10s linear infinite',
+          }}
+        />
+        <p>Loading...</p>
+      </div>
+    );
+  }
+  
+
   return (
-    
     <div className="consultation">
       <a
-            className="Doctolib"
-            href="https://www.doctolib.fr/osteopathe/vilennes-seine/sebastien-azanza"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LazyImage
-              src="/assets/images/doctolib-logo.webp"
-              alt="Doctolib Logo"
-              className="logoDoctolib"
-            />
-          </a>
+        className="Doctolib"
+        href="https://www.doctolib.fr/osteopathe/vilennes-seine/sebastien-azanza"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="/assets/images/doctolib-logo.webp"
+          alt="Doctolib Logo"
+          className="logoDoctolib"
+        />
+      </a>
+
       <h1>Nos Spécialités en Ostéopathie</h1>
       <div className="specialites-container">
-        <SpecialiteCard
-          title="Ostéopathie Crânienne"
-          definition="Une approche de l'ostéopathie qui se concentre sur le traitement des dysfonctions du crâne et des structures voisines, en utilisant des techniques douces pour améliorer la mobilité et la fonction du système crânio-sacré."
-          imageSrc="/assets/images/osteopathie-cranienne.png"
-        />
-        <SpecialiteCard
-          title="Ostéopathie Myofasciale"
-          definition="Une méthode qui cible les restrictions et les tensions dans les muscles et les fascias (les tissus conjonctifs qui enveloppent les muscles) pour restaurer la mobilité et réduire la douleur en travaillant sur les points de déclenchement et les adhérences."
-          imageSrc="/assets/images/osteopathie-myofasciale.png"
-        />
-        <SpecialiteCard
-          title="Ostéopathie Pédiatrique"
-          definition="Une spécialité de l'ostéopathie qui se concentre sur les soins de santé des enfants, des nourrissons et des femmes enceintes, en utilisant des techniques adaptées à leur développement et à leurs besoins spécifiques."
-          imageSrc="/assets/images/osteopathie-pediatrique.png"
-        />
-        <SpecialiteCard
-          title="Ostéopathie Structurelle"
-          definition="Une approche qui se concentre sur la correction des désalignements et des dysfonctions du système musculo-squelettique, en utilisant des manipulations directes pour améliorer la fonction articulaire et musculaire."
-          imageSrc="/assets/images/osteopathie-structurelle.png"
-        />
+        {specialitesData.specialites.map((specialite, index) => (
+          <SpecialiteCard
+            key={index}
+            title={specialite.title}
+            imageSrc={specialite.imageSrc}
+            onClick={() => openModal(specialite.title, specialite.definition, specialite.imageSrc)}
+          />
+        ))}
       </div>
+
+      {showShapes && (
+        <div className="geometric-shapes">
+          <div className="circle"></div>
+          <div
+            className="circle2"
+            style={{
+              backgroundImage: showCaduceus
+                ? "url('/assets/images/caduceus.webp')"
+                : 'none',
+              backgroundSize: '180px 180px',
+              backgroundPosition: 'center 8mm',
+              backgroundRepeat: 'no-repeat',
+            }}
+          ></div>
+          <div className="circle3"></div>
+        </div>
+      )}
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        className="modalConsult"
+        overlayClassName="modal-overlay"
+      >
+        <div className="modal-image-container">
+          <img src={modalContent.imageSrc} alt={modalContent.title} className="modal-image" />
+          <div className="modal-content-overlay">
+            <h2>{modalContent.title}</h2>
+            <p>{modalContent.definition}</p>
+          </div>
+        </div>
+        <button onClick={closeModal} className="modal-close">X</button>
+      </Modal>
     </div>
   );
 }

@@ -13,13 +13,14 @@ function Header() {
     <header className="site-header">
       <nav>
         <button className="menu-toggle" onClick={toggleMenu}>
-          &#9776; {/* Icône hamburger */}
+          &#9776;
         </button>
         <ul className={`nav-list ${isMenuOpen ? 'open' : ''}`}>
           <li><Link to="/"><h1>Accueil</h1></Link></li>
           <li><Link to="/consultation"><h1>Consultation</h1></Link></li>
+          <li><Link to="/notre-personnel-medical"><h1>Notre Personnel Médical</h1></Link></li>
+          <li><Link to="/Blog"><h1>Blog</h1></Link></li>
           <li><h1>Accès</h1></li>
-          <li><h1>Contact</h1></li>
           <li><Link to="/FAQ"><h1>FAQ</h1></Link></li>
         </ul>
       </nav>

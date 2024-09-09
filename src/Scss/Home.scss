@@ -3,11 +3,11 @@
 
 .home-content {
     display: flex;
-    flex-direction: column; /* Arrange les éléments en colonne pour que le texte soit au-dessus du carrousel */
-    align-items: center;    /* Centre le texte et le carrousel horizontalement */
-    justify-content: center; /* Centre le texte et le carrousel verticalement */
-    min-height: 100vh;      /* Assure que la section prend la hauteur totale de la fenêtre */
-    position: relative;     /* Permet aux éléments positionnés à l'intérieur d'utiliser z-index */
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    min-height: 100vh;     
+    position: relative;     
     font-family: 'Roboto Flex', sans-serif;
     .logo{
         width: 100px;
@@ -16,22 +16,27 @@
     }
 
     img.logoDoctolib {
-        position: fixed;         /* Fixe le logo à un endroit spécifique de l'écran */
-        width: 200px;             /* Ajustez la largeur selon vos besoins */
-        height: auto;            /* Maintient les proportions de l'image */
-        top: 80px;               /* Distance du haut de l'écran */
-        left: 30px;              /* Distance du bord gauche de l'écran */
-        z-index: 1000;           /* Assure que le logo reste au-dessus des autres éléments */
-    }    
+      position: fixed;
+      width: 200px;
+      height: auto;
+      top: 80px;
+      left: 30px;
+      z-index: 1000;
+      transition: transform 0.3s ease; 
+    }
+    
+    img.logoDoctolib:hover {
+      transform: scale(1.2); 
+    }  
 
     h1, p {
-      z-index: 1;            /* Définit un niveau de superposition plus élevé que celui du carrousel */
-      color: white;         /* Assure que le texte est visible sur le fond */
+      z-index: 1;            
+      color: white;       
     }
   
     h1 {
-      top: 20px;             /* Ajuste la position du titre */
-      font-size: 2rem;       /* Taille du texte du titre */
+      top: 20px;             
+      font-size: 2rem;      
     }
 
     .osteoLogo{
@@ -40,8 +45,8 @@
     }
   
     p {
-      top: 80px;             /* Ajuste la position du paragraphe */
-      font-size: 2rem;       /* Taille du texte du paragraphe */
+      top: 80px;            
+      font-size: 2rem;     
     }
 
     p:first-of-type {
@@ -49,42 +54,42 @@
     }
     
     p:last-of-type {
-      top: 130px; /* Ajustez cette valeur pour positionner le deuxième paragraphe correctement */
+      top: 130px; 
     }
   
     .carrouselContainer {
       position: relative;
-      width: 100%;          /* Largeur du conteneur du carrousel */
-      height: 450px;         /* Hauteur du conteneur du carrousel */
-      overflow: hidden;     /* Cache les parties de l'image qui dépassent le conteneur */
+      width: 100%;         
+      height: 450px;         
+      overflow: hidden;     
       margin-bottom: -6rem;
       display: flex;
-      align-items: center;  /* Centre les images verticalement */
+      align-items: center;  
       justify-content: center;
-      z-index: 0; /* Centre les images horizontalement */
+      z-index: 0; 
     }
 
     .textContainer {
-      position: absolute; /* Permet de superposer le texte au carrousel */
-      z-index: 2; /* Assure que le texte et le rectangle sont au-dessus du carrousel */
-      top: 20%; /* Ajustez la position verticale du conteneur */
-      left: 50%; /* Centrez horizontalement */
-      transform: translateX(-50%); /* Centrez le conteneur horizontalement */
-      background-color: rgba(0, 0, 0, 0.5); /* Couleur de fond gris translucide */
-      padding: 20px; /* Ajoutez du padding pour l'espace autour du texte */
-      border-radius: 10px; /* Ajoutez des coins arrondis si désiré */
-      text-align: center; /* Centre le texte à l'intérieur du conteneur */
-      color: white; /* Couleur du texte pour s'assurer qu'il est bien lisible */
-      max-width: 90%; /* Limitez la largeur du conteneur */
+      position: absolute; 
+      z-index: 2; 
+      top: 20%; 
+      left: 50%; 
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.5); 
+      padding: 20px; 
+      border-radius: 10px;
+      text-align: center; 
+      color: white; 
+      max-width: 90%; 
     }
     .textContainer h1 {
-      margin: 0; /* Supprimez les marges par défaut si nécessaire */
+      margin: 0; 
       
     }
     
     .textContainer p {
-      margin: 10px 0 0; /* Espace entre les paragraphes */
-      font-size: 1.5rem; /* Ajustez la taille de la police des paragraphes */
+      margin: 10px 0 0; 
+      font-size: 1.5rem; 
     }
     
   
@@ -95,13 +100,13 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: opacity 1s ease-in-out; /* Transition fluide pour le changement d'opacité */
-      opacity: 0; /* Cache les images par défaut */
-      z-index: 0; /* Assure que les images sont derrière le texte */
+      transition: opacity 1s ease-in-out;
+      opacity: 0;
+      z-index: 0; 
     }
   
     .carrouselImg.active {
-      opacity: 1; /* Affiche l'image active */
+      opacity: 1; 
     }
   
     .prevButton, .nextButton {
@@ -113,8 +118,8 @@
       border: none;
       padding: 10px;
       cursor: pointer;
-      z-index: 3; /* Définit un niveau de superposition plus élevé pour les boutons */
-      font-size: 24px; /* Taille des boutons */
+      z-index: 3; 
+      font-size: 24px;
     }
   
     .prevButton {
@@ -129,8 +134,8 @@
       width: 0;
       height: 0rem;
       position: absolute;
-      right: 0; /* Positionne le triangle à droite */
-      top: 70%; /* Positionne le triangle verticalement centré */
+      right: 0; 
+      top: 70%; 
       margin-top: 15rem;
       margin-bottom: 5rem;
       border-left: 500px solid transparent;
@@ -141,8 +146,8 @@
       width: 0;
       height: 0rem;
       position: absolute;
-      left: 0; /* Positionne le triangle à droite */
-      top: 70%; /* Positionne le triangle verticalement centré */
+      left: 0; 
+      top: 70%; 
       margin-top: 15rem;
       margin-bottom: 5rem;
       border-left: 0px solid transparent;
@@ -152,25 +157,25 @@
   }
   .text-between {
     position: absolute;
-    bottom: 0; /* Positionne le texte en bas de la page */
-    left: 50%; /* Centre le texte horizontalement */
-    transform: translateX(-50%); /* Ajuste le texte pour qu'il soit vraiment centré */
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
     color: #9d1738;
-    font-size: 24px; /* Taille de la police */
+    font-size: 24px; 
     margin-bottom: -100px; 
   }
 
   .text-content {
     position: relative;
-    padding-top: 40px; /* Ajoute de l'espace entre le titre et le texte */
+    padding-top: 40px; 
     font-size: 16px;
     color: #333;
-    line-height: 1.5; /* Améliore la lisibilité avec une hauteur de ligne augmentée */
-    text-align: center; /* Centre le texte si souhaité */
+    line-height: 1.5; 
+    text-align: center; 
   }
   
   .text-content p {
-    margin: 10px 0; /* Ajoute de l'espace entre les paragraphes */
+    margin: 10px 0; 
   }
 
   .LogoRéseau{

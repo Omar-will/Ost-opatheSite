@@ -3,7 +3,7 @@
   position: fixed; 
   bottom: 0; 
   width: 100%;
-  
+  font-family: 'Roboto Flex', sans-serif;
 
   &-header {
     background-color: #282c34;
@@ -31,7 +31,6 @@
   }
 }
 
-/* Modal styles */
 .modal {
   display: flex;
   justify-content: center;
@@ -46,6 +45,10 @@
 }
 
 .modal-content {
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #eae1d3;
   margin: 15% auto;
   padding: 20px;

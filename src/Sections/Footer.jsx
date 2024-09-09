@@ -23,19 +23,27 @@ function Footer() {
           <div className="modal-content">
             <span className="close" onClick={toggleLegalModal}>&times;</span>
             <h2>Mentions légales</h2>
-            <p>L'Association Registre des Ostéopathes de France, à but non lucratif régie par la loi du 1er juillet 1901 et son décret d'application du 16 août 1901, enregistrée sous le n° W332002941 à la Préfecture de Gironde (esplanade Charles de Gaulle 33077 Bordeaux cedex). Responsable légal : Christophe COUTURAUD, Président.
+            <p>Mentions légales
 
-Adresse mail contact@osteopathie.org :
+Sébastien Azanza
+4 Allée de la Crète, 78670 Villennes-sur-Seine
 
-Les données à caractère personnelle recueillies sur le site par le biais du formulaire contact sont confidentielles et ne font l’objet d’aucune diffusion extérieure.
+Contact :
+06 44 14 27 18
+4 Allée de la Crète, 78670 Villennes-sur-Seine
 
- Formulaire de demande d’inscription :
+Numéro ADELI
 
-Les données recueillies par le biais du formulaire de demande d’adhésion sont utilisées pour transmettre des informations uniquement par pushmailing. Elles ne font l’objet d’aucune diffusion.
+780010617
 
-La mention relative à la Loi informatique et liberté est précisé sous le formulaire de demande d’inscription.
+Directeur de la publication :
+Sébastien Azanza
 
-Conformément à la Loi Informatique et Libertés du 06/01/1978, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant et d'opposition à leur traitement. Si vous souhaitez l'exercer, vous pouvez écrire</p>
+Mentions légales supplémentaires
+
+PROPRIÉTÉ INTELLECTUELLE
+
+Les informations figurant sur le site sont réservées à un usage exclusivement personnel et ne peuvent être en tout ou partie reproduites. L’ensemble des données (textes, sons ou images) figurant sur les pages de ce site est la propriété exclusive de Sébastien Azanza. Les marques de l’exploitant du site Internet, ainsi que les logos figurant sur le site sont des éléments protégés par les dispositions du droit de la propriété intellectuelle et ne peuvent faire l’objet, sans consentement de Sébastien Azanza, d’aucune reproduction ni représentation partielle ou totale. Toute reproduction ou représentation, en tout ou partie, à d’autres fins sur un quelconque support est interdite sans l’autorisation expresse et préalable de Sébastien Azanza et constituerait une contrefaçon au sens des articles L 335-2 et suivants du code de la propriété intellectuelle. Le non-respect de cette interdiction constitue une contrefaçon pouvant engager la responsabilité civile et pénale du contrefacteur. Les liens hypertextes mis en œuvre au sein du site en direction d’autres sites et/ou de pages personnelles et d’une manière générale vers toutes ressources existantes sur internet ne sauraient engager la responsabilité de Sébastien Azanza. Législation française : Droit d’accès au fichier informatisé : toute information directement ou indirectement nominative figurant sur ce site peut être rectifiée ou retirée à la demande de la personne concernée à l’administrateur du service, conformément à la loi française No 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés.Quelques images sont Conçu par Freepik voici le lien renvoyant vers www.freepik.com</p>
           </div>
         </div>
       )}

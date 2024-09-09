@@ -1,0 +1,124 @@
+.notre-personnel {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto Flex', sans-serif;
+  // background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.notre-personnel h2 {
+  font-size: 2.5em;
+  margin: 44px 0;
+  z-index: 8;
+  color: #000;
+}
+
+.doctors-container {
+  display: flex;
+  justify-content: center;
+  gap: 550px; 
+  flex-wrap: wrap;
+}
+
+.doctor-card {
+  background-color: rgba(244, 244, 244, 0.8); 
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  height: 900px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 130px;
+  position: relative;
+  z-index: 0;
+}
+
+.doctor-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); 
+  border-radius: 8px; 
+}
+
+
+.doctor-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.doctor-info {
+  text-align: center;
+}
+
+.doctor-info h3 {
+  font-size: 1.2em;
+  color: #a31335; 
+  margin-bottom: 10px;
+}
+
+.doctor-info h5 {
+  font-size: 1.1em;
+  color: #a31335;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.doctor-info ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  text-align: left;
+}
+
+.doctor-info ul li {
+  font-size: 0.95em;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.doctor-info p {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.consult-image-container {
+  margin: -40px auto 20px auto; 
+  text-align: center;
+  top: 0%;
+  left: 24%;
+}
+
+.consult-image {
+  width: 500px; 
+  height: 500px; 
+  border-radius: 50%; 
+  object-fit: cover;  
+  border: 3px solid #a31335;
+  position: absolute;
+  top: 30%;
+  left: 33.5%;  
+}
+
+.circle-custom {
+  width: 810px;
+  height: 810px;
+  border-radius: 70%;
+  background-color: #a31335; 
+  background-size: 740px 740px; 
+  background-position: center 5mm;
+  background-repeat: no-repeat; 
+  position: absolute;
+  top: 0%;
+  left: 24%;
+  z-index: -1;
+}

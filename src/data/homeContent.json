@@ -1,0 +1,40 @@
+{
+    "osteopath": {
+      "name": "Sebastien Azanza",
+      "slogan": "Redonnez à votre corps la liberté de mouvement.",
+      "address": "75 Rue du Pré aux Moutons, 78670 Villennes-sur-Seine.",
+      "hours": [
+        {
+          "days": "Lundi au Vendredi",
+          "hours": "08h00 à 19h00"
+        },
+        {
+          "days": "Samedi",
+          "hours": "09h00 à 12h00"
+        }
+      ],
+      "images": [
+        "/assets/images/image1.webp",
+        "/assets/images/image2.webp",
+        "/assets/images/image3.webp"
+      ],
+      "socialMedia": [
+        {
+          "name": "LinkedIn",
+          "image": "/assets/images/linkedin.png"
+        },
+        {
+          "name": "Facebook",
+          "image": "/assets/images/facebook.png"
+        },
+        {
+          "name": "TikTok",
+          "image": "/assets/images/tiktok.png"
+        }
+      ],
+      "links": {
+        "doctolib": "https://www.doctolib.fr/osteopathe/vilennes-seine/sebastien-azanza"
+      }
+    }
+  }
+  

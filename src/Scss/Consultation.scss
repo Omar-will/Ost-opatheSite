@@ -1,50 +1,209 @@
-// Consultation.scss
-
 .consultation {
-    padding: 20px;
-    text-align: center;
-  }
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  font-family: 'Roboto Flex', sans-serif;
+  background-size: cover;      
+  background-position: center;  
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  min-height: 100vh;   
+}
+
+.specialites-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.specialite-card {
+  background-color: #282c34;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 4rem;
+  cursor: pointer;
+}
+
+.specialite-image {
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.specialite-card h3 {
+  margin: 10px 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.specialite-card p {
+  font-size: 1em;
+  color: #333;
+  flex: 1;
+}
+
+img.logoDoctolib {
+  position: fixed;
+  width: 200px;
+  height: auto;
+  top: 80px;
+  left: 30px;
+  z-index: 1000;
+  transition: transform 0.3s ease; 
+}
+
+img.logoDoctolib:hover {
+  transform: scale(1.2); 
+}
+
+.geometric-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: -1;
+}
+
+.circle, .circle2, .circle3 {
+  position: absolute;
+  background-color: #a31335;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0.5s;
+}
+
+.circle2 {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  top: 40%;
+  animation-delay: 0.5s;
+  left: 80%;
   
-  .specialites-container {
+}
+
+.circle3 {
+  width: 200px;
+  height: 100px;
+  border-radius: 50%;
+  border-bottom: 130px solid #a31335;
+  top: 80%;
+  left: 10%;
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 20px; // espace entre les cartes
+    z-index: 1001;
   }
   
-  .specialite-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+  .modalConsult {
+    background: none;
+    padding: 0;
     border-radius: 8px;
-    padding: 15px;
-    width: 300px; // largeur fixe pour les cartes
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #282c34; 
   }
   
-  .specialite-image {
-    max-width: 100%;
+  
+  .modal-image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .modal-image {
+    width: 100%;
     height: auto;
     border-radius: 8px;
+  }
+  
+  .modal-content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .modal-content-overlay h2 {
+    margin-top: 100px;
     margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: bold;
   }
   
-  .specialite-card h3 {
-    margin: 10px 0;
-    font-size: 1.5em;
+  .modal-content-overlay p {
+    font-size: 1.3em;
+    line-height: 1.7;
+    margin: 1rem;
   }
   
-  .specialite-card p {
-    font-size: 1em;
-    color: #333;
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #a31335;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
-
-  img.logoDoctolib {
-    position: fixed;         /* Fixe le logo à un endroit spécifique de l'écran */
-    width: 200px;             /* Ajustez la largeur selon vos besoins */
-    height: auto;            /* Maintient les proportions de l'image */
-    top: 80px;               /* Distance du haut de l'écran */
-    left: 30px;              /* Distance du bord gauche de l'écran */
-    z-index: 1000;           /* Assure que le logo reste au-dessus des autres éléments */
-} 
+  
+  .modal-close:hover {
+    background: #8a1c1f;
+  }
   
