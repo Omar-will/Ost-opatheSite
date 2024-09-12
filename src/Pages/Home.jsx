@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import "../Scss/Home.scss";
 import content from '../data/homeContent.json';
+import DoctolibLogo from '../Components/DoctolibLogo'; 
 
 const LazyImage = ({ src, alt, className, lazy = true }) => (
   <img src={src} alt={alt} className={className} loading={lazy ? "lazy" : "eager"} />
@@ -24,28 +25,16 @@ function Home() {
     return () => clearInterval(interval);
   }, [nextImage]);
 
-  // Préchargement uniquement de la première image du carrousel
   useEffect(() => {
     const img = new Image();
-    img.src = '/assets/images/image1.webp'; // Précharge uniquement la première image
+    img.src = '/assets/images/image1.webp'; 
   }, []);
 
   return (
     <div>
       <main>
         <section className="home-content">
-          <a
-            className="Doctolib"
-            href={content.osteopath.links.doctolib}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LazyImage
-              src="/assets/images/doctolib-logo.webp"
-              alt="Doctolib Logo"
-              className="logoDoctolib"
-            />
-          </a>
+          <DoctolibLogo />
           <LazyImage
             className="logo"
             src="/assets/images/ost-removebg-preview.webp"
@@ -68,7 +57,7 @@ function Home() {
                 className={`carrouselImg ${index === currentIndex ? 'active' : ''}`}
                 src={src}
                 alt={`Image ${index + 1}`}
-                lazy={index !== currentIndex} // Charge immédiatement l'image active, les autres en lazy
+                lazy={index !== currentIndex} 
               />
             ))}
             <button className="nextButton" onClick={nextImage}>❯</button>
@@ -92,6 +81,7 @@ function Home() {
             />
           ))}
         </div>
+        <div className="elfsight-app-d42f775b-d004-4686-81f1-de8155c07a1b" data-elfsight-app-lazy></div>
       </main>
     </div>
   );

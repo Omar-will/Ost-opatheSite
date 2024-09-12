@@ -19,8 +19,9 @@ function Header() {
           <li><Link to="/"><h1>Accueil</h1></Link></li>
           <li><Link to="/consultation"><h1>Consultation</h1></Link></li>
           <li><Link to="/notre-personnel-medical"><h1>Notre Personnel Médical</h1></Link></li>
+          <li><Link to="/les-locaux"><h1>Les Locaux</h1></Link></li>
           <li><Link to="/Blog"><h1>Blog</h1></Link></li>
-          <li><h1>Accès</h1></li>
+          <li><Link to="/Acces"><h1>Accès</h1></Link></li>
           <li><Link to="/FAQ"><h1>FAQ</h1></Link></li>
         </ul>
       </nav>

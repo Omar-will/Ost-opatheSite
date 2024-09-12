@@ -1,6 +1,8 @@
 import React from 'react';
 import '../Scss/NotrePersonnel.scss'; 
 import salle2Image from '../assets/images/Salle2.webp';
+import DoctolibLogo from '../Components/DoctolibLogo.jsx'; 
+
 
 function NotrePersonnel() {
   const doctors = [
@@ -50,7 +52,7 @@ function NotrePersonnel() {
 
   return (
     <div className="notre-personnel" style={{ backgroundImage: `url(${salle2Image})` }}>
-    
+    <DoctolibLogo />
       <h2>Notre Personnel Médical</h2>
       <div className="doctors-container">
         {doctors.map((doctor, index) => (
@@ -89,12 +91,6 @@ function NotrePersonnel() {
         <img src="/assets/images/consult.webp" alt="Consultation" className="consult-image" />
       </div>
 
-      <div
-        className="circle-custom"
-        style={{
-          backgroundImage: "url('/assets/images/caduceus.webp')",
-        }}
-      ></div>
     </div>
   );
 }

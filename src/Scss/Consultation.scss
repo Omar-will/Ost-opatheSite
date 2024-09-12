@@ -7,7 +7,7 @@
   background-position: center;  
   background-repeat: no-repeat;
   background-attachment: fixed; 
-  min-height: 100vh;   
+  min-height: 100vh;  
 }
 
 .specialites-container {
@@ -153,8 +153,8 @@ img.logoDoctolib:hover {
   
   .modal-image {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 900px;
+    
   }
   
   .modal-content-overlay {
@@ -206,4 +206,133 @@ img.logoDoctolib:hover {
   .modal-close:hover {
     background: #8a1c1f;
   }
+
+  @media (max-width: 1200px) {
+    .modalConsult {
+      max-width: 95%;
+    }
   
+    .modal-content-overlay {
+      padding: 15px;
+      h2 {
+        font-size: 1.3em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+  
+    .modal-image {
+      height: 800px;
+    }
+  }
+  
+  @media (max-width: 840px) {
+    .modalConsult {
+      max-width: 95%;
+    }
+  
+    .modal-content-overlay {
+      padding: 10px;
+      h2 {
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 0.9em;
+      }
+    }
+  
+    .modal-image {
+      height: 800px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img.logoDoctolib {
+      position: static;
+      width: 150px;
+      margin: 1px auto; 
+      display: block; 
+    }
+  }
+  
+  @media (max-width: 615px) {
+    .modalConsult {
+      max-width: 95%;
+      max-height: 95%;
+    }
+  
+    .modal-content-overlay {
+      padding: 5px;
+      h2 {
+        font-size: 1.1em;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+  
+    .modal-image {
+      height: 750px;
+    }
+  }
+  
+  @media (max-width: 490px) {
+    .modalConsult {
+      max-width: 100%;
+      max-height: 90%;
+    }
+  
+    .modal-content-overlay {
+      padding: 2px;
+      h2 {
+        font-size: 0.9em;
+      }
+      p {
+        font-size: 0.7em;
+      }
+    }
+  
+    .modal-image {
+      height: 800px;
+    }
+  }
+  
+  @media (max-width: 395px) {
+    .modalConsult {
+      max-width: 100%;
+      max-height: 55%;
+    }
+  
+    .modal-content-overlay {
+      padding: 0;
+      h2 {
+        font-size: 0.7em;
+      }
+      p {
+        font-size: 0.5em;
+      }
+    }
+  
+    .modal-image {
+      height: 600px;
+    }
+  }
+  
+  @media (max-width: 475px) {
+    .specialite-card {
+      flex-direction: column;
+      text-align: center; 
+      padding: 10px; 
+    }
+  
+    .specialite-image {
+      margin-right: 0; 
+      max-width: 100%; 
+    }
+  
+    .specialite-card h3 {
+      margin: 10px 0;
+      font-size: 1.2em; 
+    }
+  }

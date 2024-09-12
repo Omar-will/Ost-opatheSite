@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../Scss/Consultation.scss';
 import Modal from 'react-modal';
+import DoctolibLogo from '../Components/DoctolibLogo';
 import specialitesData from '../data/consultationContent.json'; 
 
 Modal.setAppElement('#root');
@@ -17,9 +18,8 @@ function Consultation() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState({});
   const [showCaduceus, setShowCaduceus] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);  // Ajout pour vérifier si les images sont chargées
+  const [imagesLoaded, setImagesLoaded] = useState(false); 
 
-  // Précharger toutes les images avant le rendu
   useEffect(() => {
     const imagesToPreload = [
       '/assets/images/osteopathe-crane.webp',
@@ -35,7 +35,7 @@ function Consultation() {
       img.onload = () => {
         loadedImagesCount++;
         if (loadedImagesCount === imagesToPreload.length) {
-          setImagesLoaded(true);  // Toutes les images sont chargées
+          setImagesLoaded(true); 
         }
       };
     });
@@ -50,7 +50,6 @@ function Consultation() {
     setModalIsOpen(false);
   };
 
-  // Afficher les formes géométriques après 1 seconde
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowShapes(true);
@@ -59,7 +58,6 @@ function Consultation() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Tant que les images ne sont pas chargées, on affiche un loader ou rien
   if (!imagesLoaded) {
     return (
       <div>
@@ -80,19 +78,7 @@ function Consultation() {
 
   return (
     <div className="consultation">
-      <a
-        className="Doctolib"
-        href="https://www.doctolib.fr/osteopathe/vilennes-seine/sebastien-azanza"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img
-          src="/assets/images/doctolib-logo.webp"
-          alt="Doctolib Logo"
-          className="logoDoctolib"
-        />
-      </a>
-
+      <DoctolibLogo />
       <h1>Nos Spécialités en Ostéopathie</h1>
       <div className="specialites-container">
         {specialitesData.specialites.map((specialite, index) => (

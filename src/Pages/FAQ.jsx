@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Scss/FAQ.scss'; 
+import DoctolibLogo from '../Components/DoctolibLogo';
 
 const FAQ = () => {
 
@@ -37,28 +38,13 @@ const FAQ = () => {
     
   ];
 
-  const LazyImage = ({ src, alt, className }) => (
-    <img src={src} alt={alt} className={className} loading="lazy" />
-  );
-
   const toggleAnswer = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
     <div className="faq-container">
-      <a
-            className="Doctolib"
-            href="https://www.doctolib.fr/osteopathe/vilennes-seine/sebastien-azanza"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LazyImage
-              src="/assets/images/doctolib-logo.webp"
-              alt="Doctolib Logo"
-              className="logoDoctolib"
-            />
-          </a>
+      <DoctolibLogo />
       <h1>Questions Fréquentes</h1>
       <div className="faq-list">
         {questions.map((item, index) => (

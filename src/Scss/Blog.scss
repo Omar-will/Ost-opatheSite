@@ -1,12 +1,14 @@
 .blog {
   padding: 20px;
   background-color: #f9f9f9;
+  text-align: center; 
 }
 
 .video-gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 200px;
 }
 
 .video-card {
@@ -15,6 +17,14 @@
   margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  position: relative;
+}
+
+.video-image {
+  width: 100%;
+  height: 300px;
+  border-bottom: 1px solid #ddd;
+  object-fit: cover;
 }
 
 .video-info {
@@ -24,7 +34,9 @@
 
 .video-info h3 {
   margin: 0;
+  padding: 10px;
   font-size: 1.2em;
+  text-align: center;
 }
 
 .video-info p {

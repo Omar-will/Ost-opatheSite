@@ -2,11 +2,15 @@
   padding: 20px;
   text-align: center;
   font-family: 'Roboto Flex', sans-serif;
-  // background-color: #fff;
   min-height: 100vh;
   overflow: hidden;
   z-index: 0;
+  background-image: url('../assets/images/Salle2.webp'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
 }
+
 
 .notre-personnel h2 {
   font-size: 2.5em;
@@ -20,6 +24,7 @@
   justify-content: center;
   gap: 550px; 
   flex-wrap: wrap;
+  position: relative;
 }
 
 .doctor-card {
@@ -47,7 +52,6 @@
   background-color: rgba(0, 0, 0, 0.2); 
   border-radius: 8px; 
 }
-
 
 .doctor-image {
   width: 100%;
@@ -92,10 +96,12 @@
 }
 
 .consult-image-container {
-  margin: -40px auto 20px auto; 
+  position: absolute;
+  top: 70%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  top: 0%;
-  left: 24%;
+  z-index: 1;
 }
 
 .consult-image {
@@ -104,9 +110,8 @@
   border-radius: 50%; 
   object-fit: cover;  
   border: 3px solid #a31335;
-  position: absolute;
   top: 30%;
-  left: 33.5%;  
+  left: 40%;  
 }
 
 .circle-custom {
@@ -121,4 +126,156 @@
   top: 0%;
   left: 24%;
   z-index: -1;
+}
+
+@media (max-width: 1440px) {
+
+  .consult-image-container {
+    position: absolute;
+    top: 80%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .consult-image {
+    width: 300px; 
+    height: 300px; 
+    top: 30%;
+    left: 40%;  
+  }
+  
+}
+@media (min-width: 1263px) and (max-width: 1440px) {
+  .doctors-container {
+    gap: 300px;
+  }
+
+  .doctor-card {
+    width: 250px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .consult-image {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    top: 9%;
+    left: 75%;
+  }
+
+  .circle-custom {
+    width: 600px;
+    height: 600px;
+    top: 10%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 1272px) {
+  .doctors-container {
+    gap: 300px;
+  }
+
+  .doctor-card {
+    width: 250px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .consult-image {
+    width: 100%;
+    max-width: 50%;
+    height: auto;
+    top: 9%;
+    left: 75%;
+  }
+
+  .circle-custom {
+    width: 600px;
+    height: 600px;
+    top: 10%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 939px) {
+  .doctors-container {
+    gap: 20px;
+  }
+
+  .doctor-card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .consult-image-container {
+    position: absolute;
+    top: 20%; 
+    left: 89%;
+    transform: translate(-50%, -50%);
+  }
+
+  .consult-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    top: 50%;
+    left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctors-container {
+    gap: 20px;
+  }
+
+  .doctor-card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .circle-custom {
+    width: 500px;
+    height: 500px;
+    top: 20%;
+    left: 10%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .notre-personnel h2 {
+    font-size: 1.8em;
+  }
+
+  .doctor-info h3 {
+    font-size: 1.1em;
+  }
+
+  .doctor-info h5 {
+    font-size: 1em;
+  }
+
+  .doctor-info ul li {
+    font-size: 0.85em;
+  }
+
+  .consult-image {
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+    top: 60%;
+    left: 0%;
+  }
+
+  .circle-custom {
+    width: 300px;
+    height: 300px;
+    top: 30%;
+    left: 10%;
+  }
 }

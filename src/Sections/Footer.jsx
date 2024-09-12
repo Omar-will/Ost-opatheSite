@@ -54,13 +54,6 @@ Les informations figurant sur le site sont réservées à un usage exclusivement
           <div className="modal-content">
             <span className="close" onClick={toggleContactModal}>&times;</span>
             <h2>Contact</h2>
-            <p>Horaires et coordonnées</p>
-            <p>Lundi : 08h00 - 19h00</p>
-            <p>Mardi : 08h00 - 19h00</p>
-            <p>Mercredi : 08h00 - 19h00</p>
-            <p>Jeudi : 08h00 - 19h00</p>
-            <p>Vendredi : 08h00 - 19h00</p>
-            <p>Samedi : 09h00 - 12h00</p>
             <p>Coordonnées : 06 44 14 27 18</p>
           </div>
         </div>
