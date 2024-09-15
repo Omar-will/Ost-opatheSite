@@ -34,7 +34,9 @@ function Home() {
     <div>
       <main>
         <section className="home-content">
-          <DoctolibLogo />
+            <div className="home-doctolib-logo">
+              <DoctolibLogo />
+            </div>
           <LazyImage
             className="logo"
             src="/assets/images/ost-removebg-preview.webp"
@@ -73,12 +75,19 @@ function Home() {
           ))}
           <h3><b>Suivez votre ostéopathe sur les réseaux sociaux</b></h3>
           {content.osteopath.socialMedia.map((social, index) => (
+          <a
+             key={index}
+             href={social.link} 
+             target="_blank"
+             rel="noopener noreferrer"
+           >
             <LazyImage
               key={index}
               src={social.image}
               alt={`${social.name} Logo`}
               className="LogoRéseau"
             />
+          </a>
           ))}
         </div>
         <div className="elfsight-app-d42f775b-d004-4686-81f1-de8155c07a1b" data-elfsight-app-lazy></div>

@@ -9,6 +9,7 @@ import LesLocaux from './Pages/LesLocaux.jsx';
 import Blog from './Pages/Blog';
 import Acces from './Pages/Acces.jsx';
 import FAQ from './Pages/FAQ';
+import MentionsLegales from './Sections/MentionsLegales.jsx';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/Acces" element={<Acces />} />
           <Route path="/FAQ" element={<FAQ />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
         </Routes>
       </main>
       <Footer />

@@ -1,4 +1,3 @@
-// src/components/DoctolibLogo.js
 import React from 'react';
 import '../Scss/DoctolibLogo.scss'; 
 const DoctolibLogo = () => {

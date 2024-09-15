@@ -21,15 +21,18 @@
       "socialMedia": [
         {
           "name": "LinkedIn",
-          "image": "/assets/images/linkedin.png"
+          "image": "/assets/images/linkedin.png",
+          "link": "https://www.linkedin.com/in/sebastien-azanza"
         },
         {
           "name": "Facebook",
-          "image": "/assets/images/facebook.png"
+          "image": "/assets/images/facebook.png",
+          "link": "https://www.facebook.com/sebastien-azanza"
         },
         {
-          "name": "TikTok",
-          "image": "/assets/images/tiktok.png"
+          "name": "Instagram",
+          "image": "assets/images/insta.png",
+          "link": "https://www.instagram.com/sebastienazanza"
         }
       ],
       "links": {

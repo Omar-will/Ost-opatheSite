@@ -1,6 +1,6 @@
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import DoctolibLogo from '../Components/DoctolibLogo'; 
+import DoctolibLogo from '../Components/DoctolibLogo';
 import '../Scss/Acces.scss';
 
 const position = [48.9358, 1.9927];
@@ -11,6 +11,11 @@ const Acces = () => {
       <DoctolibLogo />
       <h1>Accès au Cabinet Médical</h1>
       <p>Voici la localisation de la Maison Medicale sur la carte :</p>
+      <div className="image-with-caption">
+        <img src="../assets/images/local1.webp" alt="Vu du site" className="captioned-image" />
+        <div className="caption">Vu du site</div>
+      </div>
+
       <MapContainer center={position} zoom={13} style={{ height: '500px', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

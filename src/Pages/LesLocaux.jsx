@@ -17,7 +17,7 @@ const images = [
 const LesLocaux = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-
+ 
   const openModal = (index) => {
     setCurrentIndex(index);
     setIsOpen(true);

@@ -2,57 +2,14 @@ import React from 'react';
 import '../Scss/NotrePersonnel.scss'; 
 import salle2Image from '../assets/images/Salle2.webp';
 import DoctolibLogo from '../Components/DoctolibLogo.jsx'; 
-
+import doctorsData from '../data/doctors.json'; 
 
 function NotrePersonnel() {
-  const doctors = [
-    {
-      name: 'Dr. Sébastien Azanza',
-      specialty: 'Ostéopathe',
-      bio: 'Dr. Azanza a plus de 15 ans d’expérience en ostéopathie et est spécialisé dans le traitement des douleurs musculo-squelettiques.',
-      formations: [
-        '2020 - Auriculothérapie - CERS-TA',
-        '2018 - Ostéopathe - ISOGM',
-        '2013 - Étiopathe - Faculté d\'Etiopathie de Paris',
-      ],
-      experiences: [
-        '2014 - 2019 - Cabinet - Orgeval',
-        '2014 - 2017 - Cabinet - Saint-Germain-en-Laye',
-        '2014 - 2017 - Enseignant - Centre d\'étiopathie des Pyrénées - Paris',
-        '2011 - 2014 - Cabinet - Nogent-le-Roi',
-        '2012 - 2013 - Praticien - Hôpital Bicêtre APHP - Le Kremlin-Bicêtre - Urgences',
-      ],
-      associations: 'Administrateur - TISS Santé 78',
-      publications: [
-        '2013 - Approche étiopathique des syndromes canalaires du nerf médian - Mémoire',
-      ],
-    },
-    {
-      name: 'Dr. Sébastien Azanza',
-      specialty: 'Ostéopathe',
-      bio: 'Dr. Azanza a plus de 15 ans d’expérience en ostéopathie et est spécialisé dans le traitement des douleurs musculo-squelettiques.',
-      formations: [
-        '2020 - Auriculothérapie - CERS-TA',
-        '2018 - Ostéopathe - ISOGM',
-        '2013 - Étiopathe - Faculté d\'Etiopathie de Paris',
-      ],
-      experiences: [
-        '2014 - 2019 - Cabinet - Orgeval',
-        '2014 - 2017 - Cabinet - Saint-Germain-en-Laye',
-        '2014 - 2017 - Enseignant - Centre d\'étiopathie des Pyrénées - Paris',
-        '2011 - 2014 - Cabinet - Nogent-le-Roi',
-        '2012 - 2013 - Praticien - Hôpital Bicêtre APHP - Le Kremlin-Bicêtre - Urgences',
-      ],
-      associations: 'Administrateur - TISS Santé 78',
-      publications: [
-        '2013 - Approche étiopathique des syndromes canalaires du nerf médian - Mémoire',
-      ],
-    },
-  ];
+  const doctors = doctorsData.doctors;
 
   return (
     <div className="notre-personnel" style={{ backgroundImage: `url(${salle2Image})` }}>
-    <DoctolibLogo />
+      <DoctolibLogo />
       <h2>Notre Personnel Médical</h2>
       <div className="doctors-container">
         {doctors.map((doctor, index) => (
@@ -86,11 +43,9 @@ function NotrePersonnel() {
         ))}
       </div>
 
-      {/* Image between doctor presentations */}
       <div className="consult-image-container">
         <img src="/assets/images/consult.webp" alt="Consultation" className="consult-image" />
       </div>
-
     </div>
   );
 }
