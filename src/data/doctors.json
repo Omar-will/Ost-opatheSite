@@ -1,9 +1,9 @@
 {
     "doctors": [
       {
-        "name": "DO. Sébastien Azanza",
+        "name": "Sébastien Azanza DO",
         "specialty": "Ostéopathe",
-        "bio": "DO. Azanza a plus de 15 ans d’expérience en ostéopathie et est spécialisé dans le traitement des douleurs musculo-squelettiques.",
+        "bio": "Sébastien Azanza a plus de 15 ans d’expérience en ostéopathie.",
         "formations": [
           "2020 - Auriculothérapie - CERS-TA",
           "2018 - Ostéopathe - ISOGM",
@@ -22,9 +22,9 @@
         ]
       },
       {
-        "name": "DO. Stéphane Daumain",
+        "name": "Stéphane Daumain",
         "specialty": "Ostéopathe",
-        "bio": "Ayant étudié dans une prestigieuse Faculté d'Étiopathie de Paris après six années de formation rigoureuse, Stéphane Daumain exerce son art avec expertise depuis 2014. En tant que praticien passionné, il met à profit ses compétences techniques pour soulager une vaste gamme de troubles fonctionnels, grâce à des manipulations manuelles précises et adaptées à tous les âges et profils. Que vous soyez enfant, adulte, senior ou sportif, il propose une approche personnalisée, respectueuse du corps, toujours guidée par le principe fondamental de la non-douleur. Ses interventions, minutieusement étudiées, s'accompagnent souvent de soins ciblés sur les tissus tendineux, ligamentaires et musculaires, assurant ainsi une prise en charge globale et harmonieuse. Fort de ses solides connaissances scientifiques acquises durant son cursus post-bac, Stéphane Daumain sait ajuster ses traitements en fonction des besoins spécifiques de chacun, garantissant une prise en charge douce et efficace."
+        "bio": "Ayant étudié à la Faculté d'Étiopathie de Paris après six années de formation rigoureuse, Stéphane Daumain exerce son art avec expertise depuis 2014. En tant que praticien passionné, il met à profit ses compétences techniques pour soulager une vaste gamme de troubles fonctionnels, grâce à des manipulations manuelles précises et adaptées à tous les âges et profils. Que vous soyez enfant, adulte, senior ou sportif, il propose une approche personnalisée, respectueuse du corps, toujours guidée par le principe fondamental de la non-douleur. Ses interventions, minutieusement étudiées, s'accompagnent souvent de soins ciblés sur les tissus tendineux, ligamentaires et musculaires, assurant ainsi une prise en charge globale et harmonieuse. Fort de ses solides connaissances scientifiques acquises durant son cursus post-bac, Stéphane Daumain sait ajuster ses traitements en fonction des besoins spécifiques de chacun, garantissant une prise en charge douce et efficace."
       }
     ]
   }

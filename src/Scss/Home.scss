@@ -150,7 +150,12 @@
     color: #9d1738;
     font-size: 24px; 
     margin-bottom: -100px; 
-  }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 100%;
+}
+
 
   .text-content {
     position: relative;

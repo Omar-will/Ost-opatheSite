@@ -42,7 +42,7 @@ const LesLocaux = () => {
       <DoctolibLogo />
       <div className="location-cards">
         <div className="card">
-          <h3>Maison Medicale</h3>
+          <h3>Maison Médicale</h3>
           <p>75 Rue du Pré aux Moutons, 78670 Villennes-sur-Seine</p>
           <p>Un espace moderne et convivial pour vous accueillir en toute sérénité.</p>
         </div>

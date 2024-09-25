@@ -9,8 +9,7 @@ const Acces = () => {
   return (
     <div className="acces-container">
       <DoctolibLogo />
-      <h1>Accès au Cabinet Médical</h1>
-      <p>Voici la localisation de la Maison Medicale sur la carte :</p>
+      <h1>Accès à la Maison Médicale</h1>
       <div className="image-with-caption">
         <img src="../assets/images/local1.webp" alt="Vu du site" className="captioned-image" />
         <div className="caption">Vu du site</div>

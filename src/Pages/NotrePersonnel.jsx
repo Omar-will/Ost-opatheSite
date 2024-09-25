@@ -10,7 +10,7 @@ function NotrePersonnel() {
   return (
     <div className="notre-personnel" style={{ backgroundImage: `url(${salle2Image})` }}>
       <DoctolibLogo />
-      <h2>Notre Personnel Médical</h2>
+      <h2>Notre Personnel</h2>
       <div className="doctors-container">
         {doctors.map((doctor, index) => (
           <div key={index} className="doctor-card">
